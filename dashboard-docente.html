@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Docente - Colegio San Martín</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegación superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">🏫 Colegio San Martín - Módulo Docente</a>
+            <div class="d-flex align-items-center">
+                <span class="text-white me-3">Docente: Prof. Carlos Gutiérrez</span>
+                <a href="index.html" class="btn btn-outline-light btn-sm">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="row g-4">
+            
+            <!-- Columna Izquierda: Formulario de Carga de Notas del Colegio -->
+            <div class="col-md-5">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title fw-bold m-0 text-success">Cargar Calificación Escolar</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="formCalificacion">
+                            <div class="mb-3">
+                                <label for="materia" class="form-label">Año y Materia</label>
+                                <select class="form-select" id="materia" required>
+                                    <option value="" selected disabled>Seleccione año y asignatura...</option>
+                                    <option value="1° Año A - Matemática">1° Año A - Matemática</option>
+                                    <option value="1° Año A - Lengua y Literatura">1° Año A - Lengua y Literatura</option>
+                                    <option value="2° Año B - Historia">2° Año B - Historia</option>
+                                    <option value="3° Año A - Biología">3° Año A - Biología</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="alumno" class="form-label">Estudiante</label>
+                                <select class="form-select" id="alumno" required>
+                                    <option value="" selected disabled>Seleccione alumno...</option>
+                                    <option value="Juan Pérez">Juan Pérez</option>
+                                    <option value="María Gómez">María Gómez</option>
+                                    <option value="Lucas Fernández">Lucas Fernández</option>
+                                    <option value="Sofia Martínez">Sofia Martínez</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label">Instancia / Periodo</label>
+                                <select class="form-select" id="periodoEvaluacion">
+                                    <option value="1° Trimestre - Examen Parcial">1° Trimestre - Examen Parcial</option>
+                                    <option value="1° Trimestre - Trabajo Práctico">1° Trimestre - Trabajo Práctico</option>
+                                    <option value="2° Trimestre - Examen Parcial">2° Trimestre - Examen Parcial</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="nota" class="form-label">Calificación (1 al 10)</label>
+                                <input type="number" class="form-control" id="nota" min="1" max="10" step="0.5" placeholder="Ej: 8" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-success w-100 fw-semibold">Guardar en Boletín</button>
+                        </form>
+
+                        <div id="alertaExito" class="alert alert-success mt-3 d-none text-center" role="alert">
+                            <strong>¡Éxito!</strong> Calificación Guardada en la base del colegio.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Registro de Notas en Pantalla -->
+            <div class="col-md-7">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title fw-bold m-0 text-secondary">Registro Reciente de Notas</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Materia / Curso</th>
+                                        <th>Estudiante</th>
+                                        <th>Instancia</th>
+                                        <th class="text-center">Nota</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaNotas">
+                                    <tr>
+                                        <td>1° Año A - Matemática</td>
+                                        <td>Juan Pérez</td>
+                                        <td>1° Trimestre</td>
+                                        <td class="text-center"><span class="badge bg-success fs-6">8.0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2° Año B - Historia</td>
+                                        <td>María Gómez</td>
+                                        <td>1° Trimestre</td>
+                                        <td class="text-center"><span class="badge bg-success fs-6">9.5</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

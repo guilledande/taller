@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoconsulta Alumno - Colegio San Martín</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegación superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">🏫 Colegio San Martín - Portal del Alumno / Tutor</a>
+            <div class="d-flex align-items-center">
+                <span class="text-white me-3">Estudiante: Juan Pérez (1° Año A)</span>
+                <a href="index.html" class="btn btn-outline-light btn-sm">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        
+        <!-- Pestañas de Autoconsulta (Boletín, Asistencias y Estado Financiero) -->
+        <ul class="nav nav-pills mb-4 justify-content-center bg-white p-2 rounded-3 shadow-sm" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-bold" id="pills-notas-tab" data-bs-toggle="pill" data-bs-target="#pills-notas" type="button" role="tab">
+                    📊 Calificaciones y Boletín
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="pills-asistencia-tab" data-bs-toggle="pill" data-bs-target="#pills-asistencia" type="button" role="tab">
+                    📅 Historial de Asistencias
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="pills-cuotas-tab" data-bs-toggle="pill" data-bs-target="#pills-cuotas" type="button" role="tab">
+                    💳 Cuotas y Estado de Deuda
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- SECCIÓN 1: CALIFICACIONES / BOLETÍN -->
+            <div class="tab-pane fade show active" id="pills-notas" role="tabpanel">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title fw-bold m-0 text-primary">Boletín de Calificaciones - Ciclo Lectivo 2026</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Asignatura</th>
+                                        <th>Profesor</th>
+                                        <th>1° Trimestre</th>
+                                        <th>2° Trimestre</th>
+                                        <th class="text-center">Estado Final</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">Matemática</td>
+                                        <td>Prof. Carlos Gutiérrez</td>
+                                        <td><span class="badge bg-success fs-6">8.0</span></td>
+                                        <td>-</td>
+                                        <td class="text-center"><span class="badge bg-primary">Cursando</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Lengua y Literatura</td>
+                                        <td>Prof. Ana Gómez</td>
+                                        <td><span class="badge bg-success fs-6">9.0</span></td>
+                                        <td>-</td>
+                                        <td class="text-center"><span class="badge bg-primary">Cursando</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Historia</td>
+                                        <td>Prof. Roberto Sánchez</td>
+                                        <td><span class="badge bg-success fs-6">7.5</span></td>
+                                        <td>-</td>
+                                        <td class="text-center"><span class="badge bg-primary">Cursando</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Biología</td>
+                                        <td>Prof. Laura Benítez</td>
+                                        <td><span class="badge bg-success fs-6">8.5</span></td>
+                                        <td>-</td>
+                                        <td class="text-center"><span class="badge bg-primary">Cursando</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: ASISTENCIAS -->
+            <div class="tab-pane fade" id="pills-asistencia" role="tabpanel">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title fw-bold m-0 text-secondary">Registro de Asistencia General</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row text-center mb-4">
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded bg-light">
+                                    <h6 class="text-muted">Presentes</h6>
+                                    <h3 class="text-success fw-bold">45</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded bg-light">
+                                    <h6 class="text-muted">Ausencias</h6>
+                                    <h3 class="text-danger fw-bold">2</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded bg-light">
+                                    <h6 class="text-muted">Tardanzas</h6>
+                                    <h3 class="text-warning fw-bold">1</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Materia / Bloque</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>16/10/2026</td>
+                                        <td>Matemática</td>
+                                        <td><span class="badge bg-success">Presente</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15/10/2026</td>
+                                        <td>Historia</td>
+                                        <td><span class="badge bg-success">Presente</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14/10/2026</td>
+                                        <td>Lengua y Literatura</td>
+                                        <td><span class="badge bg-danger">Ausente Justificado</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: CUOTAS Y ESTADO FINANCIERO -->
+            <div class="tab-pane fade" id="pills-cuotas" role="tabpanel">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title fw-bold m-0 text-success">Estado de Cuenta y Cuotas Escolares</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Concepto</th>
+                                        <th>Vencimiento</th>
+                                        <th>Importe</th>
+                                        <th class="text-center">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">Matrícula Anual 2026</td>
+                                        <td>10/01/2026</td>
+                                        <td>$25.000</td>
+                                        <td class="text-center"><span class="badge bg-success">Pagado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Cuota Marzo 2026</td>
+                                        <td>10/03/2026</td>
+                                        <td>$18.000</td>
+                                        <td class="text-center"><span class="badge bg-success">Pagado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Cuota Abril 2026</td>
+                                        <td>10/04/2026</td>
+                                        <td>$18.000</td>
+                                        <td class="text-center"><span class="badge bg-success">Pagado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Cuota Mayo 2026</td>
+                                        <td>10/05/2026</td>
+                                        <td>$18.000</td>
+                                        <td class="text-center"><span class="badge bg-warning text-dark">Pendiente</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
